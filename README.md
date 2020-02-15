@@ -9,3 +9,5 @@
 
  - [Sesión 1](Sesion-01): Python Fundamentals
  - [Sesión 2](Sesion-02): Estructuras de datos y funciones
+ - [Sesión 3](Sesion-03): Módulos, paquetes y ambientes virtuales
+ - [Sesión 4](Sesion-04): Manipulación de archivos, JSON, CSV y excepciones

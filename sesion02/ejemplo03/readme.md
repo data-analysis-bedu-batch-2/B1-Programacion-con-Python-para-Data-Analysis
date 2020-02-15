@@ -76,9 +76,23 @@ In [10]: # Operaciones
 
 In [11]: s2 = {4, 5, 6, 7, 8}
 
-In [12]: s1 & s2 # Union 
-Out[12]: {4, 5}
+In [12]: s1.union(s2) # Union 
+Out[12]: {1, 2, 3, 4, 5, 6, 7, 8}
 
 In [13]: s1.intersection(s2)  # Interseccion
 Out[13]: {4, 5}
+
+In [14]: s1 - s2  # Diferencia
+Out[14]: {1, 2, 3}
+
+In [15]: s1.difference(s2)  # Diferencia
+Out[15]: {4, 5}
+
+In [16]: s1.issubset(s2)  # Subsets
+Out[16]: False
+
+In [17]: s3 = {1, 2} # Supersets
+
+In [18]: s1.issuperset(s3)
+Out[18]: True
 ```
