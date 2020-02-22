@@ -49,7 +49,7 @@ In [2]: with open("ejemplo.json", "w") as fjson: # Guardarlo como archivo
    ...:      
    ...:
 
-In [3]: !cat ejemplo.json    
+In [3]: cat ejemplo.json    
 {
     "nombre": "diccionario",
     "year": 2019

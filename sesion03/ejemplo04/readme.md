@@ -85,13 +85,13 @@ $ipython
 
 In [1]: import tablas2
 
-In [2]: tablas2?
+In [2]: tablas2
 Type:        module
-String form: <module 'tablas2' from '/home/sergio/dev/python-clases/sesion03/ejemplo03/tablas2.py'>
+String form: <module 'tablas2' from '/home/mario/dev/python-clases/sesion03/ejemplo03/tablas2.py'>
 File:        ~/dev/python-clases/sesion03/ejemplo03/tablas2.py
 Docstring:   Módulo para imprimir tablas de multiplicar en la pantalla.
 
-In [3]: tablas2.tabla?
+In [3]: tablas2.tabla
 Signature: tablas2.tabla(n)
 Docstring: Imprime la tabla N en la pantalla
 File:      ~/dev/python-clases/sesion03/ejemplo03/tablas2.py

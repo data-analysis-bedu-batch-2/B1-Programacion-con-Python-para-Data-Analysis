@@ -11,3 +11,5 @@
  - [Sesión 2](Sesion-02): Estructuras de datos y funciones
  - [Sesión 3](Sesion-03): Módulos, paquetes y ambientes virtuales
  - [Sesión 4](Sesion-04): Manipulación de archivos, JSON, CSV y excepciones
+ - [Sesión 5](Sesion-05): Programación Orientada a Objetos
+ - [Sesión 6](Sesion-06): Servidores web y APIs 

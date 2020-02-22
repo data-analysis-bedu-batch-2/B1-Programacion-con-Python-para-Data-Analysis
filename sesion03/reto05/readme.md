@@ -1,18 +1,6 @@
 ## Reto 05
 
-`reservaciones/`
+`api_clients/`
 
-Organizar el programa calculador de tiempos de Bedu Bikes en un paquete llamado `tiempos` con dos módulos: `mas_centrico.py` y `tiempo_promedio.py`. El primer módulo indicará el lugar mas céntrico, mientras que el segundo le indicará el tiempo de desplazamiento promedio de todos los destinos que el usuario ha capturado.
+Organiza el programa `api_clients` con dos módulos: `star_wars.py` y `contrataciones.py`. El primer módulo obtendrá datos del api de star wars (personajes) mientras que el segundo módulo traerá información del api de contrataciones de compranet
 
-```
-$ python3 main.py 
-El lugar más centrico es Júarez con 30 minutos de ida y 38 de vuelta.
-El tiempo promedio de desplazamiento es 42 minutos.
-
-$ tree
-├── main.py
-└── tiempos
-    ├── __init__.py
-    ├── mas_centrico.py
-    └── tiempo_promedio.py
-```

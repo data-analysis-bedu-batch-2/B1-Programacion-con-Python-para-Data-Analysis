@@ -1,5 +1,7 @@
 ## Reto 04
 
-`api_ecobici_modulo.py`
+`modulo_star_wars.py`
 
-De forma similar al ejemplo anterior, modifica `api_ecobici.py` para que la función de obtener_datos se pueda usar como módulo o como archivo independiente. Agrega docstrings para indicar al usuario final cómo utilizarlo.
+Modifica el archivo `api_star_wars.py` para que se pueda usar como módulo y como archivo, debe de tener una función llamada get_people que regresa todos los personajes desde el API.
+
+Agregar Docstring al módulo y a la función para saber cómo funcionan.

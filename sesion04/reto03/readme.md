@@ -12,12 +12,12 @@ Puedes utilizar funciones y paquetes vistos anteriormente para importar esta fun
 $ python info_archivos.py 
 [
     {
-        "tamanio": 741, 
+        "tamaño": 741, 
         "nombre": "info_archivos.py", 
         "fecha": "Fri Aug  2 01:39:51 2019"
     }, 
     {
-        "tamanio": 330, 
+        "tamaño": 330, 
         "nombre": "readme.md", 
         "fecha": "Fri Aug  2 01:16:45 2019"
     }

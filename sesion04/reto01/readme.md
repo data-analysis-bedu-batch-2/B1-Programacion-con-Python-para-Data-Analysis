@@ -2,7 +2,9 @@
 
 `estaciones.py`
 
-Pedir al usuario una lista, con el nombre de un lugar, latitud y longitud. Guardar la información en un archivo llamado estaciones.txt, separado por tabulador. Anexar al final la información si ya existe el archivo.
+Pedir al usuario ingresar elementos a una lista, cada elemento debe de contar con el nombre de un lugar, latitud y longitud. 
+
+Guardar la información en un archivo llamado estaciones.txt, separado por tabulador. Anexar al final la información si ya existe el archivo.
 
 ```
 $ python3 lugares.py 

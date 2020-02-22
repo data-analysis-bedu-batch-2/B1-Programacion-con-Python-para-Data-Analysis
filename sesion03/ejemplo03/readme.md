@@ -29,7 +29,7 @@ Out [3]: print(r)
 }
 ```
 
-`personajes_star_wars.py`
+`api_star_wars.py`
 
-Consume el API de Star Wars y detecta cuál es el personaje más viejo 
+Consume el API de Star Wars y detecta cuál es el personaje más alto 
 

@@ -16,7 +16,7 @@ In [2]: with open("ejemplo.csv", 'w') as fcsv: # Creando archivo
    ...:     writer.writerow(["Nombre2", "Apellido2", "Genero2"]) 
    ...:     writer.writerow(["Nombre3", "Apellido3", "Genero3"]) 
 
-In [3]: !cat ejemplo.csv  # Leer contenidos en linux                                                                                                                                 
+In [3]: cat ejemplo.csv  # Leer contenidos en linux                                                                                                                                 
 Nombre,Apellido,Genero
 Nombre2,Apellido2,Genero2
 Nombre3,Apellido3,Genero3
@@ -31,7 +31,7 @@ In [4]: with open("ejemplo.csv", 'r') as fcsv: # Leer archivo
 ['Nombre3', 'Apellido3', 'Genero3']
 ```
 
-Aunque por defecto el CSV se maneja como listas, es posible que también se maneje como diccionarios, si la primera línea del CSV corresponde Es posible también elegir eal nombre de sus columnas
+Aunque por defecto el CSV se maneja como listas, es posible que también se maneje como diccionarios, si la primera línea del CSV corresponde Es posible también elegir el nombre de sus columnas
 
 `archivo_csv_dict.py`
 
@@ -45,7 +45,7 @@ In [2]: with open("ejemplod.csv", 'w') as fcsv:
    ...:     writer.writerow({'Nombre': 'Pedro', 'Apellido': 'Picapiedra', 'Edad': 30}) 
    ...:     writer.writerow({'Nombre': 'Pablo', 'Apellido': 'Marmol', 'Edad': 29}) 
 
-In [3]: !cat ejemplod.csv                                                                                                                                       
+In [3]: cat ejemplod.csv                                                                                                                                       
 Nombre,Apellido,Edad
 Pedro,Picapiedra,30
 Pablo,Marmol,29
@@ -60,7 +60,7 @@ Pedro Picapiedra
 Pablo Marmol
 ```
 
-## Datetime
+## Repaso datetime
 
 Para almacenar y utilizar la fecha y hora, en Python tenemos el módulo datetime, y su clase del mismo nombre.
 

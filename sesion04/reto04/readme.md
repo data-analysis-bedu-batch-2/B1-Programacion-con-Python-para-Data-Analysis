@@ -17,17 +17,17 @@ Path:   Carpeta a mostrar. Carpeta actual si no se coloca
 --json: Imprime json. Diccionario si no se coloca.
 
 $ python3 info_archivos2.py 
-[{'tamanio': 1070, 'nombre': 'info_archivos2.py', 'fecha': 'Fri Aug  2 17:05:18 2019'}, {'tamanio': 566, 'nombre': 'readme.md', 'fecha': 'Fri Aug  2 17:01:57 2019'}]
+[{'tamaño': 1070, 'nombre': 'info_archivos2.py', 'fecha': 'Fri Aug  2 17:05:18 2019'}, {'tamaño': 566, 'nombre': 'readme.md', 'fecha': 'Fri Aug  2 17:01:57 2019'}]
 
 $ python3 info_archivos2.py --json
 [
     {
-        "tamanio": 1070, 
+        "tamaño": 1070, 
         "nombre": "info_archivos2.py", 
         "fecha": "Fri Aug  2 17:05:18 2019"
     }, 
     {
-        "tamanio": 566, 
+        "tamaño": 566, 
         "nombre": "readme.md", 
         "fecha": "Fri Aug  2 17:01:57 2019"
     }

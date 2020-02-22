@@ -11,9 +11,9 @@ Para este ejemplo, vamos a crear la carpeta utilerias y dentro su archivo `__ini
 ```python
 In [1]: import utilerias
 
-In [2]: utilerias?
+In [2]: utilerias
 Type:        module
-String form: <module 'utilerias' from '/home/sergio/dev/python-clases/sesion03/ejemplo04/utilerias/__init__.py'>
+String form: <module 'utilerias' from '/home/mario/dev/python-clases/sesion03/ejemplo04/utilerias/__init__.py'>
 File:        ~/dev/python-clases/sesion03/ejemplo04/utilerias/__init__.py
 Docstring:   Conjunto de modúlo que resuelve pequeñas tareas
 ```
@@ -44,15 +44,15 @@ In [3]: import utilerias.archivos # Modo 1
 
 In [4]: from utilerias import tablas # Modo 2
 
-In [5]: utilerias.archivos?
+In [5]: utilerias.archivos
 Type:        module
-String form: <module 'utilerias.archivos' from '/home/sergio/dev/python-clases/sesion03/ejemplo04/utilerias/archivos.py'>
+String form: <module 'utilerias.archivos' from '/home/mario/dev/python-clases/sesion03/ejemplo04/utilerias/archivos.py'>
 File:        ~/dev/python-clases/sesion03/ejemplo04/utilerias/archivos.py
 Docstring:   Móudlo para mostrar una lista de archivos, con fecha y tamaño
 
-In [6]: tablas?
+In [6]: tablas
 Type:        module
-String form: <module 'utilerias.tablas' from '/home/sergio/dev/python-clases/sesion03/ejemplo04/utilerias/tablas.py'>
+String form: <module 'utilerias.tablas' from '/home/mario/dev/python-clases/sesion03/ejemplo04/utilerias/tablas.py'>
 File:        ~/dev/python-clases/sesion03/ejemplo04/utilerias/tablas.py
 Docstring:   <no docstring>
 
