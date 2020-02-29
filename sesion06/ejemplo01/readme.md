@@ -1,42 +1,61 @@
 ## Ejemplo 01
+## Consumiendo información
 
-Python, con su filosofía de baterías incluidas, contiene un servidor básico de HTTP, el cual se puede utilizar para servir contenido.
+Un API es una manera de interactuar con el servicio de un tercero, del cual normalmente se puede obtener, editar o agregar información. Las APIs pueden extender la funcionalidad de un programa. El término se asocia con APIs web, pero también existen para librerías o hardware.
 
-`servidor.py`
+Para familiarizarnos y explorar un API siempre se recomienda hacerlo primero desde un REST Client, uno de los más modernos es Insomnia.
+
+Se puede instalar desde:
+
+(https://insomnia.rest/)
+
+## Uso de Insomnia
+
+Explorar la API PokeAPI (http://pokeapi.co) con Insomnia, para obtener información acerca de algún Pokemon.
+
+## Códigos de estado
+
+Una Web API entrega códigos de estado para indicar el resultado de la operación realizada. Los tipos mas importantes son:
+
+* 2xx: La petición fue relizada exitosamente
+* 3xx: El recurso se ha movido
+* 4xx: Error por parte del cliente
+* 5xx: Error por parte del servidor
+
+![Status codes](./status_codes.png)
+
+## Métodos HTTP y su manejo con requests
+
+En una Web API, se utilizan los métodos o verbos HTTP para indicar el tipo de operación que se desa realizar.
+
+Los más utilizados son:
+
+* GET: Obtiene el recurso
+* POST: Agrega un nuevo recurso
+* PUT: Edita un recurso existente
+* DELETE: Borra un recurso
+
+`http_metodos.py`
+
 ```python
-In [1]: # Importando o usando o incluyendo el módulo
+In [1]: import requests
 
-In [2]: import http
+In [2]: requests.get("https://jsonplaceholder.typicode.com/posts") # Obtener múltiples elementos
+Out[2]: <Response [200]>
 
-In [3]: # Obteniendo ayuda del módulo
+In [3]: requests.get("https://jsonplaceholder.typicode.com/posts/1") # Obtener un elemento
+Out[3]: <Response [200]>
 
-In [4]: http.server?
-HTTP server classes.
+In [4]: requests.post("https://jsonplaceholder.typicode.com/posts", json={"post": "Nuevo post de ejemplo"}) # Nuevo elemento
+Out[4]: <Response [201]>
 
-Note: BaseHTTPRequestHandler doesn't implement any HTTP request; see
-SimpleHTTPRequestHandler for simple implementations of GET, HEAD and POST,
-and CGIHTTPRequestHandler for CGI scripts.
-[...]
+In [5]: requests.put("https://jsonplaceholder.typicode.com/posts/1", json={"post": "Editado"}) # Editar elemento
+Out[5]: <Response [404]>
 
-In [5]: # Obteniendo ayuda de la clase SimpleHTTPRequestHandler
+In [12]: requests.delete("https://jsonplaceholder.typicode.com/posts/1")  # Borrar elemento
+Out[12]: <Response [200]>
 
-In [6]: http.server.SimpleHTTPRequestHandler?
-Init signature: http.server.SimpleHTTPRequestHandler(*args, directory=None, **kwargs)
-Docstring:     
-Simple HTTP request handler with GET and HEAD commands
-```
+In [13]: requests.delete("https://jsonplaceholder.typicode.com/noexiste")  # Elemento no existente
+Out[13]: <Response [404]>
+````
 
-Se puede iniciar el servidor web básico, sin necesidad de escribir código
-
-```
-$ python3 -m http.server
-Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
-127.0.0.1 - - [12/Aug/2019 22:33:38] "GET / HTTP/1.1" 200 -
-```
-
-![ejemplo_server](./ejemplo_server.png)
-
-Ahí podemos colocar algún archivo index.html, que se mostrará por defecto.
-
-`index.html`
-![ejemplo_server2](./ejemplo_server2.png)

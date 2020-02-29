@@ -1,8 +1,10 @@
 ## Reto 02
 
-`usuario_html.py`
+`api_ecobici.py`
 
-Mostrar con el servidor web, una tabla de usuario con información variable, obtenida a partir de un archivo CSV.
-Modifica el archivo CSV para verificar su funcionamiento.
+Utiliza Flask para crear un API donde se pueda consultar información del csv de ecobici, el API debe de tener dos endpoints:
 
-![Tabla](./tabla.png)
+1. Los primeros 100 registros del csv.
+1. Alguno de los registros del csv mediante un id.
+
+Apóyate del módulo `ecobici.py`, que ya lee información del csv.

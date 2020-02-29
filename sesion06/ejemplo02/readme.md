@@ -1,36 +1,42 @@
 ## Ejemplo 02
-## Bottle.py
+## Flask
 
-Bottle.py es un micro framework para crear aplicaciones web de forma sencilla, no tiene dependencias fuera de la librería estándar de Python y debido a que todo el framework vive en un solo script, se puede considerar portable.
+Flask es un micro framework para crear un servidor web con Python. Fue creado para ser lo más sencillo posible pero con la posibilidad de hacerlo escalable.
 
-### Instalación
-
-Para su instalación, se puede descargar directamente de su sitio [bottle.py](https://bottlepy.org/bottle.py),o mediante pip:
-
-`pip3 install bottle`
-
-Como es portable, si se descargan se puede colocar en la misma carpeta que se encuentre el archivo/proyecto a correr.
-
-`hola_bottle.py`
-
-Utilizar el módulo bottle para mostrar un mensaje estilo "Hola Mundo!" en este caso, con un parámetro en su ruta que permita definir el nombre a utilizar en el saludo.
+Podemos instalar Flask de manera muy sencilla con pip.
 
 ```
-$ python3 hola-bottle.py 
-Bottle v0.12.17 server starting up (using WSGIRefServer())...
-Listening on http://localhost:8080/
-Hit Ctrl-C to quit.
+$ pip install flask
 ```
 
-![Hola mundo](./hola_mundo.png)
-![Hola Bedu](./hola_bedu.png)
+`flask-hello-world.py`
 
-### Templates
+Para iniciar el servidor lo podemos hacer desde la línea de comandos.
 
-En el ejemplo anterior, para mostrar contenido dinámico en la página, se utilizó la función `template` la cual puede insertar variables en el HTML, o ejecutar porciones de código incrustrado.
+```
+$ python flask-hello-world.py
+ * Serving Flask app "flask-hello-world" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+```
 
-`tabla_html.py`
+Si queremos que el servidor detecte nuestros cambios, entonces debemos de pasar la variable de ambiente FLASK_DEBUG como True en la línea de comandos:
 
-Generar la tabla de algún número utilizando la función template, y ejecutando código en la plantilla. Hacer uso de ciclos.
+```
+$ FLASK_ENV=development python flask-hello-world.py
+```
 
-![Tabla del 3](./tabla_3.png)
+Flask además nos permite regresar diccionarios en forma de json con su función jsonify Flask podemos crear una REST API de manera muy sencilla.
+
+`flask-rest-api.py`
+
+```
+$ curl --request GET --url http://localhost:5000/users/1
+{"firstname":"Jhon","gender":"M","lastname":"Doe"}
+
+```
+
+

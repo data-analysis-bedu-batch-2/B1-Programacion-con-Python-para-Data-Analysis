@@ -1,9 +1,8 @@
 ## Reto 04
-## API Ecobici
+## Autenticación por token
 
-Agrega al servidor de Bottle del reto pasado, que muestre en realidad, ubicaciones de estaciones Ecobici de la ciudad. Utiliza las coordenadas para calcular la distancia.
+`api_ecobici_autenticacion.py`
 
-Para hacer la conversión, utiliza la fórmula del semiverseno:
-d = √(Δx2 + Δy2)
+Agrega autenticación por token a la API creada en el reto anterior.
 
-![JSON Ecobici](./ecobici.png)
+Utiliza el la biblioteca *flask_httpauth* y su método *HTTPTokenAuth*.

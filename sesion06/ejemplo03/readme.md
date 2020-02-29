@@ -1,13 +1,14 @@
 ## Ejemplo 03
 
-### JSON con Bottle
+### Usando parámetros GET
 
-Una de los formatos habituales de un API es recibir y enviar información en formato JSON, el cual es soportado por Bottle.py. Para hacer uso del mismo, basta con enviar un diccionario con la información.
+En muchas ocasiones las APIS permiten al cliente consumir información específica. Para esto se pasan parámetros dentro de la misma URL para saber cuál es la información que debemos devolver (query parameters).
 
-`json_bottle.py`
+`get-parameters.py`
 
-### Ficheros
+### Peticiones POST
 
-Para permitir a un usuario descargar archivos, se pueden enviar archivos en Bottle.py de manera similar a como se leen archivos en Python. Cualquier clase que tenga la función `read()`, puede enviarse como archivo.
+Además de poder consumir información los usuarios de APIs a veces quieren hacer cambios en la información. El método post es el que se usa por defecto cuando se quiere modificar la información.
 
-`archivo_bottle.py`
+Se acostumbra que este método reciba la información en formato JSON.
+

@@ -1,13 +1,24 @@
 ## Reto 03
 
-`usuario_extra.py`
+`api_ecobici_paginacion.py`
 
-Basándose en el reto anterior, muestra la información del usuario en 3 formatos: HTML, JSON, y fichero CSV, a partir de la información fuente en CSV.
-Convertir la información en caso de ser necesario, para CSV, mandar el archivo fuente tal cual.
+Modifica el archivo del reto anterior para agregar paginación a tu API, de modo que la respuesta sea de la siguiente manera:
 
-Crear 3 rutas:
+```json
+{
+    "page": 1,
+    "per_page": 100,
+    "total": 2276,
+    "data": [
+        {
+            "Genero_Usuario": "M",
+            "Edad_Usuario": 12,
+            "Bici": 7639,
+            ...
+        },
+        ...
+    ]
+}
+```
 
-* "/": Vista en HTML.
-* "/json": Vista en Archivo JSON .
-* "/csv": Descarga del archivo en CSV.
-
+Agrega el manejo de parámetros a tu API para que se puedan filtrar los resultados
