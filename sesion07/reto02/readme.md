@@ -1,18 +1,18 @@
 # Reto 02
 
-`hoteles.py`
+`maskota_deals.py`
 
-Obtener los precios por noche de un destino turístico a partir de alguna página de hoteles (por ejemplo: Trip Advisor). Descargar la página mediante el navegador primeramente si hace uso extensivo de Javascript. Utilizar funciones de búsqueda así como navegación.
+De la página de Maskota encontrar todos los productos en oferta y guardarlos en csv utilizando scrapy. 
 
-![Hoteles en Paris](paris.png)
+https://maskota.com.mx/productos-guau
 
 ```
-$ python hoteles.py
+$ python maskota_deals.py
 
-Hoteles en Paris:
-   * Hotel Darcet: $2,989
-   * Hotel la Manufacture: $2,590
-   * Hotel du Printemps: $2,431
-   * Atlantic Hotel: $3,507
-   [ ... ]
+name,price
+My Dog's Boutique - Collar Penélope Con Perlas,$140.00
+HILL'S SCIENCE DIET - Gato Adulto Control Bolas de Pelo Light,$597.75
+BLUE BUFFALO - Freedom Adultos Pollo,$487.50
+MENDOTA - Collar doble trenzado níquel satinado 9/16” color olivo,$60.00
+...
 ```

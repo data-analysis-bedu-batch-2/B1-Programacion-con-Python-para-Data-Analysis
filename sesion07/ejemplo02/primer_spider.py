@@ -11,7 +11,7 @@ class QuotesSpider(scrapy.Spider):
     def parse(self, response):
         # Se puede navegar por el HTML o mediante CSS
         # Para este caso, buscaremos todas las etiquetas <div> con las clase quote
-        for quote in response.css('div.quote'):  
+        for quote in response.css('div.quote'):
             # Yield es para entregar la información en forma de diccionario.
             # scrapy se encarga de convertir estos datos al formato espcificado.
             yield {

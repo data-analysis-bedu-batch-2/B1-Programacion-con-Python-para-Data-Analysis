@@ -84,33 +84,6 @@ In [11]: tag
 Out[11]: <blockquote class="bold" id="2">Saludos!</blockquote>
 ```
 
-Para el caso de los comentarios y texto dentro o entre tags, se manejan de forma similar a un string de Python, con la diferencia que para cambiar su contenido, se utiliza el método `replace_with`.
-
-`strings_soup.py`
-
-```python
-In [12]: # NavigableString es muy similar a un string de Python, sólo cambia como se reemplaza
-
-In [13]: tag.string    
-Out[13]: 'Saludos!'
-
-In [14]: type(tag.string) 
-Out[14]: bs4.element.NavigableString
-
-In [15]: tag.string.replace_with("Bienvenidos!") 
-
-In [16]: tag
-Out[16]: <blockquote class="bold" id="2">Bienvenidos!</blockquote>
-
-In [17]: soup = BeautifulSoup("<b><!--Yo soy un comentario HTML--></b>")
-
-In [18]: soup.b.string
-Out[18]: 'Yo soy un comentario HTML'
-
-In [19]: type(soup.b.string)
-Out[19]: bs4.element.Comment
-```
-
 ### Encontrando elementos
 
 El comando `find_all` sirve para encontrar todos las etiquetas dentro del documento. Para facilitar la búsqueda de elementos, BS tiene variedad de métodos, como los siguientes:
@@ -122,10 +95,6 @@ El comando `find_all` sirve para encontrar todos las etiquetas dentro del docume
 
 Cualquiera se puede utilizar recursivamente.
 
-`find_piramide.py`
+`find_productos.py`
 
-Utilizar el HTML de ejemplo, piramide.html, para realizar las siguientes tareas.
-
-1. Listar a los productores de la pirámide alimenticia.
-2. El número total de todos los elementos.
-3. El nombre de las clases padre del elemento con nombre Tigre.
+Obten de la página principal de MercadoLibre los productos mostrados junto con su precio

@@ -1,52 +1,57 @@
- # Ejemplo 03
+## Ejemplo 03
 
- ## Scrapy
+## Selenium
 
- Scrapy es una librería de Python, que aparte de realizar tareas de *scraping*, como BeautifulSoup, también permite hacer tareas de *crawling*, esto es, navegar entre diferentes páginas. Permite realizar la tarea de forma más automatizada que BS.
+Existen página web en las cuales su contenido se obtiene a través de JS. Para obtener información de esas páginas, se puede utilizar Selenium, el cual es una librería que nos permite controlar un navegador completo.
 
- ## Instalación
+Selenium es una librería extensa que se puede utilizar para pruebas con navegador, para esta sesión se limitará su uso básico en conjunto con Scrapy.
 
- La instalación se hace de forma similar a cualquier programa de Python.
+### Instalación
 
- `$ pip install scrapy`
+Para instalar la librería se tiene que correr el comando:
 
- ## Spiders
+`pip install selenium`
 
-El funcionamiento de Scrapy comparado con BeautifulSoup, es un poco diferente. Para realizar una tarea de *scraping*, es necesario crear nuestra propia clase que herede de scrapy.Spider.
+Y un driver, que es el navegador a utilizar. Para este caso se utilizará Chrome.
 
-Para correr un spider, se tiene que utilizar el comando: `scrapy runspider`.
+[Chrome Web Driver](https://sites.google.com/a/chromium.org/chromedriver/downloads)
+![Chrome Web Driver](chrome.png)
 
-```
-$ scrapy runspider
+Descargar el driver que corresponde a la versión de Chrome instalada en el equipo.
 
-Usage
-=====
-  scrapy runspider [options] <spider_file>
+Descomprimir su contenido y agregarlo al PATH.
 
-Run the spider defined in the given file
+### Uso
 
-Options
-=======
---help, -h              show this help message and exit
--a NAME=VALUE           set spider argument (may be repeated)
---output=FILE, -o FILE  dump scraped items into FILE (use - for stdout)
---output-format=FORMAT, -t FORMAT
-                        format to use for dumping items with -o
-```
+Para usar Selenium en un spider, se tiene que agregar la libería, y hacer unos cambios en un inicialización:
 
-Como se puede ver, se debe indicar el nombre de archivo donde se encuentra el spider, y se puede elegir el formato para guardar la información.
+`spider_selenium.py`
 
-## Mi primer araña (spider)
+```python
+import scrapy
+import csv
+from selenium import webdriver
 
-`primer_spider.py`
+class Selenium(scrapy.Spider):
+    name = 'selenium_spider'
+    start_urls = [
+        'https://www.example.com/'
+    ]    
 
-Utilizar spider para obtener todas las citas bibliográficas del sitio: https://quotes.toscrape.com, siguiendo la paginación.
+    def __init__(self):
+        self.driver = webdriver.Chrome() # Driver de Selenium
 
-![Página](quotes.png)
-
-```
-$ scrapy runspider primer_spider.py -o quotes.csv
+    def start_requests(self):
+        for url in self.start_urls:
+            yield scrapy.Request(url=url, callback=self.parse)
 ```
 
-![Resultado](resultado.png)
+Al correr este ejemplo, se abriría el navegador Chrome, para obtener los datos de la página.
 
+### Ejemplo
+
+`quotes_spider.py`
+
+Crear un spider para obtener todas las citas de la página `http://quotes.toscrape.com/js/`, la cual requiere de JavaScript para mostrar su contenido.
+
+![Quotes](../ejemplo03/quotes.png)
